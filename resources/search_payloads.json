@@ -1,0 +1,22 @@
+[
+  {
+    "query": "iPhone 17 Pro",
+    "type": "existing",
+    "expected_status": 200
+  },
+  {
+    "query": "MacBook",
+    "type": "existing",
+    "expected_status": 200
+  },
+  {
+    "query": "nonexistingproduct123",
+    "type": "negative",
+    "expected_status": 200
+  },
+  {
+    "query": "Xiao",
+    "type": "partial",
+    "expected_status": 200
+  }
+]
