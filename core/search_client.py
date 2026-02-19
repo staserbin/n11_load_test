@@ -1,4 +1,4 @@
-class MarketplaceSearchGateway:
+class SearchGateway:
 
     SEARCH_ENDPOINT = "/arama"
 

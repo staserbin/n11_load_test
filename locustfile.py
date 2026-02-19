@@ -1,6 +1,6 @@
 import random
 from locust import HttpUser, task, between
-from core.search_client import MarketplaceSearchGateway
+from core.search_client import SearchGateway
 from utils.data_provider import load_search_payloads
 
 class SearchBehaviorUser(HttpUser):
@@ -8,7 +8,7 @@ class SearchBehaviorUser(HttpUser):
     wait_time = between(1, 4)
 
     def on_start(self):
-        self.gateway = MarketplaceSearchGateway(self.client)
+        self.gateway = SearchGateway(self.client)
         self.search_cases = load_search_payloads("resources/search_payloads.json")
 
     @task
